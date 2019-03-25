@@ -9,8 +9,8 @@ enum GameState { RUNNING, FINISHED_WIN, FINISHED_LOSS};
 
 struct Field{
     bool hasMine = false;
-    bool isRevealed;
-    bool hasFlag;
+    bool isRevealed = false;
+    bool hasFlag = false;
 };
 
 class MinesweeperBoard{
@@ -26,6 +26,7 @@ public:
     int getBoardWidth() const;
     int getBoardHeight() const;
     int getMineCount() const;
+    int countMines() const;
 
 
 };

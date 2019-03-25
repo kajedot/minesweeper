@@ -37,5 +37,30 @@ void MinesweeperBoard::debug_display() const {
     }
 }
 
-MinesweeperBoard::MinesweeperBoard(int width, int height, GameMode mode):width(width),height(height) {}
+MinesweeperBoard::MinesweeperBoard(int width, int height, GameMode mode):width(width),height(height),mode(mode) {}
 
+int MinesweeperBoard::getBoardWidth() const{
+    return width;
+};
+
+int MinesweeperBoard::getBoardHeight() const{
+    return height;
+};
+
+int MinesweeperBoard::getMineCount() const{
+    int counter = 0;
+
+    for(int y=0; y<height; y++){
+        for(int x=0; x<width; x++){
+            if(board[x][y].hasMine){
+                counter++;
+            }
+        }
+    }
+
+    return counter;
+};
+
+int MinesweeperBoard::countMines() const {
+
+}
