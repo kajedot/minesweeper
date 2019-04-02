@@ -26,9 +26,10 @@ public:
     int getBoardWidth() const;
     int getBoardHeight() const;
     int getMineCount() const;
-    int countMines() const;
+    int countMines(int x, int y) const;
 
 
 };
 
 #endif //INC_249297_MINESBOARD_H
+

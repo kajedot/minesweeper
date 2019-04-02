@@ -61,6 +61,62 @@ int MinesweeperBoard::getMineCount() const{
     return counter;
 };
 
-int MinesweeperBoard::countMines() const {
+int MinesweeperBoard::countMines(int x, int y) const {
+    if (!board[x][y].isRevealed)
+        return -1;
 
+    if (x < 0 || x > width - 1 || y < 0 || y > height - 1)
+        return -1;
+
+    int counter = 0;
+
+    if(x == 0){
+        if(y == 0){
+            if(board[x+1][y].hasMine)
+                counter++;
+
+            if(board[x+1][y+1].hasMine)
+                counter++;
+
+            if(board[x][y+1].hasMine)
+                counter++;
+        }
+
+        if(y == height-1){
+            if(board[x+1][y].hasMine)
+                counter++;
+
+            if(board[x+1][y-1].hasMine)
+                counter++;
+
+            if(board[x][y-1].hasMine)
+                counter++;
+
+        }
+
+    }
+
+    if(x == width-1){
+        if(y == 0){
+            if(board[x-1][y].hasMine)
+                counter++;
+
+            if(board[x-1][y+1].hasMine)
+                counter++;
+
+            if(board[x][y+1].hasMine)
+                counter++;
+        }
+
+        if(y == height-1){
+            if(board[x][y-1].hasMine)
+                counter++;
+
+            if(board[x-1][y-1].hasMine)
+                counter++;
+
+            if(board[x-1][y].hasMine)
+                counter++;
+        }
+    }
 }
