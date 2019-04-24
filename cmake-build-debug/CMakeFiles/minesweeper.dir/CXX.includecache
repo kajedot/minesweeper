@@ -6,11 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/kajetan/CLionProjects/minesweeper/main.cpp
+/home/kajetan/CLionProjects/minesweeper/minesBoard.cpp
 iostream
 -
 minesBoard.h
 /home/kajetan/CLionProjects/minesweeper/minesBoard.h
+cstdlib
+-
+ctime
+-
 
 /home/kajetan/CLionProjects/minesweeper/minesBoard.h
 

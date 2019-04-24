@@ -26,7 +26,10 @@ public:
     int getBoardWidth() const;
     int getBoardHeight() const;
     int getMineCount() const;
+    int isOutside(int x, int y) const;
     int countMines(int x, int y) const;
+    int drawField(bool dimension) const;
+
 
 
 };
