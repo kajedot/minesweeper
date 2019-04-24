@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/kajetan/CLionProjects/minesweeper/main.cpp
+iostream
+-
+minesBoard.h
+/home/kajetan/CLionProjects/minesweeper/minesBoard.h
+
 /home/kajetan/CLionProjects/minesweeper/minesBoard.cpp
 iostream
 -

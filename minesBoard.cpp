@@ -71,7 +71,7 @@ MinesweeperBoard::MinesweeperBoard(int width, int height, GameMode mode):width(w
     int area = width * height;
 
     switch (mode){
-        case 0: //debug
+        case DEBUG: //debug
 
             for(int x=0; x<width; x++){
                 for(int y=0; y<height; y++){
@@ -91,7 +91,7 @@ MinesweeperBoard::MinesweeperBoard(int width, int height, GameMode mode):width(w
 
             break;
 
-        case 1: //easy
+        case EASY: //easy
 
             minesCount = 0.1*area;
 
@@ -103,7 +103,7 @@ MinesweeperBoard::MinesweeperBoard(int width, int height, GameMode mode):width(w
 
             break;
 
-        case 2: //normal
+        case NORMAL: //normal
 
             minesCount = 0.2*area;
 
@@ -115,7 +115,7 @@ MinesweeperBoard::MinesweeperBoard(int width, int height, GameMode mode):width(w
 
             break;
 
-        case 3: //hard
+        case HARD: //hard
 
             minesCount = 0.3*area;
 
@@ -151,14 +151,14 @@ int MinesweeperBoard::getMineCount() const{
     return counter;
 };
 
-int MinesweeperBoard::isOutside(int x, int y) const {
+bool MinesweeperBoard::isOutside(int x, int y) const {
 
     if(x < 0 || x > width-1)
-        return 1;
+        return true;
     if(y < 0 || y > height-1)
-        return 1;
+        return true;
 
-    return 0;
+    return false;
 }
 
 int MinesweeperBoard::countMines(int x, int y) const {
@@ -203,4 +203,17 @@ int MinesweeperBoard::countMines(int x, int y) const {
             counter++;
 
     return counter;
+}
+
+bool MinesweeperBoard::hasFlag(int x, int y) const {
+    if (! isOutside(x, y) && board[x][y].hasFlag && ! board[x][y].isRevealed)
+        return true;
+    else
+        return false;
+
+}
+
+void MinesweeperBoard::toggleFlag(int x, int y) {
+    if (! isOutside(x, y) && ! board[x][y].isRevealed && getGameState == RUNNING)
+        board[x][y].hasFlag = true;
 }
