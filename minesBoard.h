@@ -14,6 +14,7 @@ struct Field{
 };
 
 class MinesweeperBoard{
+    GameState gameState;
     Field board[100][100];
     int width;
     int height;
@@ -23,14 +24,21 @@ public:
     void debug_display() const;
     MinesweeperBoard(int width, int height, GameMode mode);
 
+    GameState getGameState() const;
     int getBoardWidth() const;
     int getBoardHeight() const;
+    bool isRevealed(int x, int y) const;
     int getMineCount() const;
     bool isOutside(int x, int y) const;
     int countMines(int x, int y) const;
     int drawField(bool dimension) const;
     bool hasFlag(int x, int y) const;
     void toggleFlag(int x, int y);
+    bool isFirstPlayerAction() const;
+    void revealField(int x, int y);
+    char getFieldInfo(int x, int y) const;
+
+
 
 
 };
