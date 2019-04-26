@@ -50,14 +50,14 @@ int MinesweeperBoard::drawField(bool dimension) const {
         //1 -- x
 
         drawnField = (rand() % width) + 0;
-        cout << drawnField << " ";
+        //cout << drawnField << " ";
         return drawnField;
 
     } else{
         //0 -- y
 
         drawnField = (rand() % height) + 0;
-        cout << drawnField << endl;
+        //cout << drawnField << endl;
         return drawnField;
     }
 
@@ -97,7 +97,7 @@ MinesweeperBoard::MinesweeperBoard(int width, int height, GameMode mode):width(w
 
             minesCount = 0.1*area;
 
-            cout << minesCount << endl;
+            //cout << minesCount << endl;
 
             do{
                 board[drawField(1)][drawField(0)].hasMine = 1;
@@ -128,7 +128,7 @@ MinesweeperBoard::MinesweeperBoard(int width, int height, GameMode mode):width(w
             break;
     }
 
-
+    board[1][1].hasMine = true;
 }
 
 GameState MinesweeperBoard::getGameState() const {
@@ -236,15 +236,14 @@ bool MinesweeperBoard::isFirstPlayerAction() const {
         for(int x=0; x<width; x++){
             if ((isRevealed(x, y) || board[x][y].hasFlag) && getGameState() == RUNNING)
                 return false;
-            else
-                return true;
         }
     }
+    return true;
 }
 
 
 void MinesweeperBoard::revealField(int x, int y) {
-    if (!isOutside(x, y) && !isRevealed(x, y) && getGameState() == RUNNING && !board[x][y].hasFlag)
+    if (!isOutside(x, y) && !isRevealed(x, y) && getGameState() == RUNNING && !board[x][y].hasFlag) {
         if (board[x][y].hasMine) {
             if (isFirstPlayerAction() && !(mode == DEBUG)) {
                 board[x][y].hasMine = false;
@@ -260,8 +259,9 @@ void MinesweeperBoard::revealField(int x, int y) {
             } else
                 gameState = FINISHED_LOSS;
 
-        } else
-            board[x][y].isRevealed = true;
+        }
+    }
+    board[x][y].isRevealed = true;
 }
 
 char MinesweeperBoard::getFieldInfo(int x, int y) const {
@@ -285,4 +285,3 @@ char MinesweeperBoard::getFieldInfo(int x, int y) const {
         return  countMines(x, y);
 
 }
-

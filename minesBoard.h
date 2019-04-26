@@ -37,11 +37,6 @@ public:
     bool isFirstPlayerAction() const;
     void revealField(int x, int y);
     char getFieldInfo(int x, int y) const;
-
-
-
-
 };
 
 #endif //INC_249297_MINESBOARD_H
-
