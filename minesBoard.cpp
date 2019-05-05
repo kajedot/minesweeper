@@ -65,8 +65,6 @@ int MinesweeperBoard::drawField(bool dimension) const {
 
 MinesweeperBoard::MinesweeperBoard(int width, int height, GameMode mode):width(width),height(height),mode(mode) {
 
-    GameState gameState = RUNNING;
-
     srand (time(nullptr));
 
     double minesCount;
@@ -129,6 +127,10 @@ MinesweeperBoard::MinesweeperBoard(int width, int height, GameMode mode):width(w
     }
 
     board[1][1].hasMine = true;
+}
+
+void MinesweeperBoard::setGameState(GameState gmSt) {
+    gameState = gmSt;
 }
 
 GameState MinesweeperBoard::getGameState() const {
@@ -241,7 +243,6 @@ bool MinesweeperBoard::isFirstPlayerAction() const {
     return true;
 }
 
-
 void MinesweeperBoard::revealField(int x, int y) {
     if (!isOutside(x, y) && !isRevealed(x, y) && getGameState() == RUNNING && !board[x][y].hasFlag) {
         if (board[x][y].hasMine) {
@@ -264,6 +265,30 @@ void MinesweeperBoard::revealField(int x, int y) {
     board[x][y].isRevealed = true;
 }
 
+char MinesweeperBoard::IntToChar(int in) const {
+    switch ( in ) {
+        case 0:
+            return '0';
+        case 1:
+            return '1';
+        case 2:
+            return '2';
+        case 3:
+            return '3';
+        case 4:
+            return '4';
+        case 5:
+            return '5';
+        case 6:
+            return '6';
+        case 7:
+            return '7';
+        case 8:
+            return '9';
+    }
+
+}
+
 char MinesweeperBoard::getFieldInfo(int x, int y) const {
 
     if (isOutside(x, y))
@@ -282,6 +307,5 @@ char MinesweeperBoard::getFieldInfo(int x, int y) const {
         return  ' ';
 
     if (isRevealed(x, y) && countMines(x, y) > 0)
-        return  countMines(x, y);
-
+        return IntToChar( countMines(x, y) );
 }

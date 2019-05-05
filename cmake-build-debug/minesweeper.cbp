@@ -82,6 +82,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/kajetan/CLionProjects/minesweeper/MSBoardTextView.cpp">
+			<Option target="minesweeper"/>
+		</Unit>
+		<Unit filename="/home/kajetan/CLionProjects/minesweeper/MSBoardTextView.h">
+			<Option target="minesweeper"/>
+		</Unit>
+		<Unit filename="/home/kajetan/CLionProjects/minesweeper/MSTextController.cpp">
+			<Option target="minesweeper"/>
+		</Unit>
+		<Unit filename="/home/kajetan/CLionProjects/minesweeper/MSTextController.h">
+			<Option target="minesweeper"/>
+		</Unit>
 		<Unit filename="/home/kajetan/CLionProjects/minesweeper/main.cpp">
 			<Option target="minesweeper"/>
 		</Unit>

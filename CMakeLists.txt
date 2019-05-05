@@ -3,4 +3,4 @@ project(minesweeper)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(minesweeper main.cpp minesBoard.cpp minesBoard.h)
+add_executable(minesweeper main.cpp minesBoard.cpp minesBoard.h MSBoardTextView.cpp MSBoardTextView.h MSTextController.cpp MSTextController.h)

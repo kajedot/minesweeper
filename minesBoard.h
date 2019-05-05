@@ -20,10 +20,13 @@ class MinesweeperBoard{
     int height;
     GameMode mode;
 
+    char IntToChar(int in) const ;
+
 public:
     void debug_display() const;
     MinesweeperBoard(int width, int height, GameMode mode);
 
+    void setGameState(GameState gmSt);
     GameState getGameState() const;
     int getBoardWidth() const;
     int getBoardHeight() const;
