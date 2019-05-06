@@ -2,34 +2,30 @@
 #include "minesBoard.h"
 #include "MSBoardTextView.h"
 #include "MSTextController.h"
-
-using namespace std;
+#include <SFML/Graphics.hpp>
+#include "MSSFMLView.h"
 
 int main(){
-    MinesweeperBoard new_board(10, 10, EASY);
 
-//    new_board.toggleFlag(2, 3);
-//    cout << new_board.hasFlag(2, 3) << endl;
-//    new_board.revealField(2, 6);
-//
-    //new_board.revealField(3, 3);
+    MinesweeperBoard new_board(10, 10, DEBUG);
 
+    new_board.toggleFlag(1, 1);
 
-//    new_board.debug_display();
-//
-    MSBoardTextView view ( new_board );
-//
-//    view.display();
+    // create the window
+    sf::RenderWindow window (sf::VideoMode(800, 600), "Minesweeper");
 
-    MSTextController ctrl ( new_board, view );
+    MSSFMLView view (new_board);
 
-    ctrl.play();
+    while (window.isOpen())
+    {
+        // obsługa zdarzeń
+        //
+        window.clear();
+        view.draw(window);   // wywołujemy funkcję draw i dostarczamy jej okno na którym ma odbyć sie rysowanie
+        window.display();
+    }
 
-    //new_board.toggleFlag(2, 3);
-
-    //ctrl.play();
-
-    new_board.debug_display();
+    //new_board.debug_display();
 
     return 0;
 }

@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/minesweeper.dir/minesBoard.cpp.o"
   "CMakeFiles/minesweeper.dir/MSBoardTextView.cpp.o"
   "CMakeFiles/minesweeper.dir/MSTextController.cpp.o"
+  "CMakeFiles/minesweeper.dir/MSSFMLView.cpp.o"
   "minesweeper.pdb"
   "minesweeper"
 )

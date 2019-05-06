@@ -6,31 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/kajetan/CLionProjects/minesweeper/MSBoardTextView.h
-minesBoard.h
-/home/kajetan/CLionProjects/minesweeper/minesBoard.h
-
-/home/kajetan/CLionProjects/minesweeper/MSTextController.cpp
-MSTextController.h
-/home/kajetan/CLionProjects/minesweeper/MSTextController.h
+/home/kajetan/CLionProjects/minesweeper/MSSFMLView.cpp
+SFML/Graphics.hpp
+-
+MSSFMLView.h
+/home/kajetan/CLionProjects/minesweeper/MSSFMLView.h
 iostream
-/home/kajetan/CLionProjects/minesweeper/iostream
+-
 
-/home/kajetan/CLionProjects/minesweeper/MSTextController.h
-minesBoard.h
-/home/kajetan/CLionProjects/minesweeper/minesBoard.h
-MSBoardTextView.h
-/home/kajetan/CLionProjects/minesweeper/MSBoardTextView.h
-
-/home/kajetan/CLionProjects/minesweeper/main.cpp
-iostream
+/home/kajetan/CLionProjects/minesweeper/MSSFMLView.h
+SFML/Graphics.hpp
 -
 minesBoard.h
 /home/kajetan/CLionProjects/minesweeper/minesBoard.h
-MSBoardTextView.h
-/home/kajetan/CLionProjects/minesweeper/MSBoardTextView.h
-MSTextController.h
-/home/kajetan/CLionProjects/minesweeper/MSTextController.h
 
 /home/kajetan/CLionProjects/minesweeper/minesBoard.h
 

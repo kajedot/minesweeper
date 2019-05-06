@@ -11,6 +11,8 @@
 class MSTextController {
 
     void pickAction(char chr, int x, int y);
+    void display();
+
 
 
 public:
@@ -20,6 +22,7 @@ public:
     MSBoardTextView viewInContr;
 
     void play();
+
 
 
 };

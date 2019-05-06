@@ -12,15 +12,27 @@ MSTextController::MSTextController(MinesweeperBoard &board, MSBoardTextView &vie
     viewInContr = view;
 }
 
+void MSTextController::display(){
+
+    for(int y=0; y<boardInContr.getBoardHeight(); y++){
+        for(int x=0; x<boardInContr.getBoardWidth(); x++){
+            cout << "[";
+            cout << boardInContr.getFieldInfo(x, y);
+            cout << "]";
+        }
+        cout << endl;
+    }
+}
+
 void MSTextController::pickAction(char chr, int x, int y) {
     switch( chr ){
         case 'r' :
         case 'R' :
 
             boardInContr.revealField(x, y);
-            cout << "revealed " << x << y;
-            cout << boardInContr.isRevealed(x, y) << endl;
-            cout << boardInContr.isRevealed(2, 2) << endl;
+//            cout << "revealed " << x << y;
+//            cout << boardInContr.isRevealed(x, y) << endl;
+//            cout << boardInContr.isRevealed(2, 2) << endl;
             break;
 
         case 't':
@@ -30,6 +42,8 @@ void MSTextController::pickAction(char chr, int x, int y) {
     }
 }
 
+
+
 void MSTextController::play(){
     boardInContr.setGameState(RUNNING);
 
@@ -37,11 +51,10 @@ void MSTextController::play(){
     int x, y;
     char actChr;
 
-
+    display();
 
     while (boardInContr.getGameState() == RUNNING){
 
-        viewInContr.display();
 
         cout << "Pick position: \n x: ";
         cin >> x;
@@ -55,8 +68,9 @@ void MSTextController::play(){
         break;
 
         pickAction(actChr, x, y);
+
+        display();
     }
 
-    viewInContr.display();
 
 }

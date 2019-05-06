@@ -303,9 +303,9 @@ char MinesweeperBoard::getFieldInfo(int x, int y) const {
     if (isRevealed(x, y) && board[x][y].hasMine)
         return 'x';
 
-    if (isRevealed(x, y) && countMines(x, y) == 0)
-        return  ' ';
+//    if (isRevealed(x, y) && countMines(x, y) == 0)
+//        return  ' ';
 
-    if (isRevealed(x, y) && countMines(x, y) > 0)
+    if (isRevealed(x, y))
         return IntToChar( countMines(x, y) );
 }
