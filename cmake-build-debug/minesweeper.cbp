@@ -88,6 +88,12 @@
 		<Unit filename="/home/kajetan/CLionProjects/minesweeper/MSBoardTextView.h">
 			<Option target="minesweeper"/>
 		</Unit>
+		<Unit filename="/home/kajetan/CLionProjects/minesweeper/MSSFMLMenu.cpp">
+			<Option target="minesweeper"/>
+		</Unit>
+		<Unit filename="/home/kajetan/CLionProjects/minesweeper/MSSFMLMenu.h">
+			<Option target="minesweeper"/>
+		</Unit>
 		<Unit filename="/home/kajetan/CLionProjects/minesweeper/MSSFMLView.cpp">
 			<Option target="minesweeper"/>
 		</Unit>

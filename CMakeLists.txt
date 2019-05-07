@@ -8,7 +8,7 @@ find_package(SFML  REQUIRED graphics window system)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(minesweeper main.cpp minesBoard.cpp minesBoard.h MSBoardTextView.cpp MSBoardTextView.h MSTextController.cpp MSTextController.h MSSFMLView.cpp MSSFMLView.h)
+add_executable(minesweeper main.cpp minesBoard.cpp minesBoard.h MSBoardTextView.cpp MSBoardTextView.h MSTextController.cpp MSTextController.h MSSFMLView.cpp MSSFMLView.h MSSFMLMenu.cpp MSSFMLMenu.h)
 
 if(SFML_FOUND)
     include_directories(${SFML_INCLUDE_DIR})

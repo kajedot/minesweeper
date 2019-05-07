@@ -4,15 +4,21 @@
 #include "MSTextController.h"
 #include <SFML/Graphics.hpp>
 #include "MSSFMLView.h"
+#include "MSSFMLMenu.h"
+
 
 int main(){
 
-    MinesweeperBoard new_board(10, 10, DEBUG);
+    sf::RenderWindow windowMenu (sf::VideoMode(800, 700), "MinesweeperMenu", sf::Style::Titlebar);
 
-    new_board.toggleFlag(1, 1);
+    MSSFMLMenu menu;
 
-    // create the window
-    sf::RenderWindow window (sf::VideoMode(800, 600), "Minesweeper");
+    menu.draw(windowMenu);
+
+    MinesweeperBoard new_board (menu.boardSize*5, menu.boardSize*5, menu.gameMode);
+
+
+    sf::RenderWindow window (sf::VideoMode(800, 700), "Minesweeper", sf::Style::Titlebar);
 
     MSSFMLView view (new_board);
 

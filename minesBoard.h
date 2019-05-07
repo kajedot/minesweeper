@@ -25,6 +25,7 @@ class MinesweeperBoard{
 public:
     void debug_display() const;
     MinesweeperBoard(int width, int height, GameMode mode);
+    void setBoard(int width, int height, GameMode mode);
 
     void setGameState(GameState gmSt);
     GameState getGameState() const;

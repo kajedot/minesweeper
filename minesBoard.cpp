@@ -129,6 +129,7 @@ MinesweeperBoard::MinesweeperBoard(int width, int height, GameMode mode):width(w
     board[1][1].hasMine = true;
 }
 
+
 void MinesweeperBoard::setGameState(GameState gmSt) {
     gameState = gmSt;
 }
@@ -309,3 +310,4 @@ char MinesweeperBoard::getFieldInfo(int x, int y) const {
     if (isRevealed(x, y))
         return IntToChar( countMines(x, y) );
 }
+

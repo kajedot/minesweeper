@@ -78,8 +78,35 @@ void MSSFMLView::drawFieldsInfo(sf::RenderWindow &window) {
     }
 }
 
-void drawFieldsInfo(sf::RenderWindow &window);
+void MSSFMLView::drawGameOver(sf::RenderWindow &window) {
+    sf::Font font;
+    if (!font.loadFromFile("/usr/share/fonts/TTF/DejaVuSans.ttf"))
+    {
+        std::cout << "Error while loading font" << std::endl;
+    }
 
+    while (window.isOpen()) {
+        // check all the window's events that were triggered since the last iteration of the loop
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            // "close requested" event: we close the window
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+
+        window.clear(sf::Color::Magenta);
+
+        sf::Text textWelcome;
+        textWelcome.setFont(font);
+        textWelcome.setFillColor(sf::Color::Yellow);
+        textWelcome.setCharacterSize(35);
+        textWelcome.setString("You Looooose!1 =(((");
+        textWelcome.setPosition(300, 100);
+        window.draw(textWelcome);
+
+        window.display();
+    }
+}
 
 
 void MSSFMLView::draw(sf::RenderWindow &window){
@@ -135,7 +162,13 @@ void MSSFMLView::draw(sf::RenderWindow &window){
         drawLines(window);
         drawFieldsInfo(window);
 
+
+
         // end the current frame
         window.display();
+
+        while (boardInSFML.getGameState() == FINISHED_LOSS){
+            drawGameOver(window);
+        }
     }
 }

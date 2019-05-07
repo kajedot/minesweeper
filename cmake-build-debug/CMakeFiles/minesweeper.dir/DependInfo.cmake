@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kajetan/CLionProjects/minesweeper/MSBoardTextView.cpp" "/home/kajetan/CLionProjects/minesweeper/cmake-build-debug/CMakeFiles/minesweeper.dir/MSBoardTextView.cpp.o"
+  "/home/kajetan/CLionProjects/minesweeper/MSSFMLMenu.cpp" "/home/kajetan/CLionProjects/minesweeper/cmake-build-debug/CMakeFiles/minesweeper.dir/MSSFMLMenu.cpp.o"
   "/home/kajetan/CLionProjects/minesweeper/MSSFMLView.cpp" "/home/kajetan/CLionProjects/minesweeper/cmake-build-debug/CMakeFiles/minesweeper.dir/MSSFMLView.cpp.o"
   "/home/kajetan/CLionProjects/minesweeper/MSTextController.cpp" "/home/kajetan/CLionProjects/minesweeper/cmake-build-debug/CMakeFiles/minesweeper.dir/MSTextController.cpp.o"
   "/home/kajetan/CLionProjects/minesweeper/main.cpp" "/home/kajetan/CLionProjects/minesweeper/cmake-build-debug/CMakeFiles/minesweeper.dir/main.cpp.o"

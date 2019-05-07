@@ -18,6 +18,7 @@ class MSSFMLView {
 
     void drawFieldsInfo(sf::RenderWindow &window);
 
+    void drawGameOver(sf::RenderWindow &window);
 
 
 public:

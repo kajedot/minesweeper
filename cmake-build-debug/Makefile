@@ -150,6 +150,33 @@ MSBoardTextView.cpp.s:
 	$(MAKE) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/MSBoardTextView.cpp.s
 .PHONY : MSBoardTextView.cpp.s
 
+MSSFMLMenu.o: MSSFMLMenu.cpp.o
+
+.PHONY : MSSFMLMenu.o
+
+# target to build an object file
+MSSFMLMenu.cpp.o:
+	$(MAKE) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/MSSFMLMenu.cpp.o
+.PHONY : MSSFMLMenu.cpp.o
+
+MSSFMLMenu.i: MSSFMLMenu.cpp.i
+
+.PHONY : MSSFMLMenu.i
+
+# target to preprocess a source file
+MSSFMLMenu.cpp.i:
+	$(MAKE) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/MSSFMLMenu.cpp.i
+.PHONY : MSSFMLMenu.cpp.i
+
+MSSFMLMenu.s: MSSFMLMenu.cpp.s
+
+.PHONY : MSSFMLMenu.s
+
+# target to generate assembly for a file
+MSSFMLMenu.cpp.s:
+	$(MAKE) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/MSSFMLMenu.cpp.s
+.PHONY : MSSFMLMenu.cpp.s
+
 MSSFMLView.o: MSSFMLView.cpp.o
 
 .PHONY : MSSFMLView.o
@@ -270,6 +297,9 @@ help:
 	@echo "... MSBoardTextView.o"
 	@echo "... MSBoardTextView.i"
 	@echo "... MSBoardTextView.s"
+	@echo "... MSSFMLMenu.o"
+	@echo "... MSSFMLMenu.i"
+	@echo "... MSSFMLMenu.s"
 	@echo "... MSSFMLView.o"
 	@echo "... MSSFMLView.i"
 	@echo "... MSSFMLView.s"
