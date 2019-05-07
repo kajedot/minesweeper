@@ -5,6 +5,10 @@ CMakeFiles/minesweeper.dir/MSBoardTextView.cpp.o: ../MSBoardTextView.cpp
 CMakeFiles/minesweeper.dir/MSBoardTextView.cpp.o: ../MSBoardTextView.h
 CMakeFiles/minesweeper.dir/MSBoardTextView.cpp.o: ../minesBoard.h
 
+CMakeFiles/minesweeper.dir/MSSFMLMenu.cpp.o: ../MSSFMLMenu.cpp
+CMakeFiles/minesweeper.dir/MSSFMLMenu.cpp.o: ../MSSFMLMenu.h
+CMakeFiles/minesweeper.dir/MSSFMLMenu.cpp.o: ../minesBoard.h
+
 CMakeFiles/minesweeper.dir/MSSFMLView.cpp.o: ../MSSFMLView.cpp
 CMakeFiles/minesweeper.dir/MSSFMLView.cpp.o: ../MSSFMLView.h
 CMakeFiles/minesweeper.dir/MSSFMLView.cpp.o: ../minesBoard.h
@@ -15,6 +19,7 @@ CMakeFiles/minesweeper.dir/MSTextController.cpp.o: ../MSTextController.h
 CMakeFiles/minesweeper.dir/MSTextController.cpp.o: ../minesBoard.h
 
 CMakeFiles/minesweeper.dir/main.cpp.o: ../MSBoardTextView.h
+CMakeFiles/minesweeper.dir/main.cpp.o: ../MSSFMLMenu.h
 CMakeFiles/minesweeper.dir/main.cpp.o: ../MSSFMLView.h
 CMakeFiles/minesweeper.dir/main.cpp.o: ../MSTextController.h
 CMakeFiles/minesweeper.dir/main.cpp.o: ../main.cpp
